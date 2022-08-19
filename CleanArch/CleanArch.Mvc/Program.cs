@@ -50,7 +50,7 @@ app.MapRazorPages();
 
 app.Run();
 
-private static void RegisterServices(IServiceCollection services)
+static void RegisterServices(IServiceCollection services)
 {
     DependencyContainer.RegisterServices(services);
 }
