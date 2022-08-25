@@ -19,6 +19,7 @@ builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<UniversityDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("UniversityDBConnection")));
+
 RegisterServices(builder.Services);
 
 var app = builder.Build();
