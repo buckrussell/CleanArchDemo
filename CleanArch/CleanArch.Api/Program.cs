@@ -1,3 +1,4 @@
+using CleanArch.Api.Configurations;
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
 using MediatR;
@@ -23,6 +24,8 @@ builder.Services.AddSwaggerGen(c =>
 });
 
 builder.Services.AddMediatR(typeof(StartupBase));
+
+builder.Services.RegisterAutoMapper();
 
 RegisterServices(builder.Services);
 

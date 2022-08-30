@@ -1,5 +1,6 @@
 using CleanArch.Infra.Data.Context;
 using CleanArch.Infra.IoC;
+using CleanArch.Mvc.Configurations;
 using CleanArch.Mvc.Data;
 using MediatR;
 using Microsoft.AspNetCore.Identity;
@@ -22,6 +23,8 @@ builder.Services.AddDbContext<UniversityDBContext>(options =>
     options.UseSqlServer(builder.Configuration.GetConnectionString("UniversityDBConnection")));
 
 builder.Services.AddMediatR(typeof(StartupBase));
+
+builder.Services.RegisterAutoMapper();
 
 RegisterServices(builder.Services);
 
